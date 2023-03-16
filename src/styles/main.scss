@@ -2,6 +2,7 @@
 @use 'hero';
 @use 'shows';
 @use 'plans';
+@use 'watch-anywhere';
 
 @font-face {
     font-family: Avenir;
@@ -22,10 +23,6 @@
     font-family: Avenir, sans-serif;
 }
 
-body {
-    background-color: variables.$backgroundColor;
-}
-
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
@@ -35,6 +32,10 @@ body {
 @mixin title($fontSize: 40px) {
     @include text($fontSize);
     color: variables.$textColorSecundary;
+}
+
+body {
+    background-color: variables.$backgroundColor;
 }
 
 .text--big {
